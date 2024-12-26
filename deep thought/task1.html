@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Project Management</title>
+  <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="https://deepthought.education/assets/images/logo/logo.svg" alt="Deep Thought Logo" class="logo">
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Journey Board</h3>
+      <button class="close-button" id="closeSidebar">&larr;</button>
+    </div>
+    <ul>
+      <li><strong>Explore the world of management</strong></li>
+      <li>Technical Project Management</li>
+      <li>Threadbuild</li>
+      <li>Structure your pointers</li>
+      <li>4SA Method</li>
+    </ul>
+  </div>
+
+  <!-- Toggle Button -->
+  <button class="toggle-arrow" id="toggleSidebar">&larr;</button>
+
+  <!-- Top-Right Menu -->
+  <div class="top-right-menu">
+    <button class="menu-icon">&#8962;</button> <!-- Home Icon -->
+    <button class="menu-icon">&#128064;</button> <!-- Binoculars Icon -->
+    <button class="menu-icon">&#9881;</button> <!-- Tools Icon -->
+    <button class="menu-icon">&#128276;</button> <!-- Bell Icon -->
+    <button class="menu-icon" style="background-color: #d3d3d3;">...</button> <!-- Dotted Icon -->
+  </div>
+
+  <section class="intro">
+    <h2>Technical Project Management</h2>
+    <p>
+      Explore the world of management. As a project manager, you play an important role in leading a project through initiation, planning, execution, monitoring, controlling, and completion.
+    </p>
+    <button class="submit-task">Submit Task</button> <!-- Submit Task Button -->
+  </section>
+
+  <section class="main-content">
+    <div class="upper-cards">
+      <div class="card">
+        <h3>Technical Project Management</h3>
+        <p>Description: Story of Alignment Scope of Agility Specific Accountable Staggering Approach</p>
+        <iframe
+          src="https://www.youtube.com/embed/example"
+          title="YouTube video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="card">
+        <h3>Threadbuild</h3>
+        <p>Description: Watch the video and thread build, jotting key threads while watching the video.</p>
+        <div class="thread">
+          <input type="text" placeholder="Sub Thread 1">
+          <input type="text" placeholder="Sub Interpretation 1">
+          <button class="add-thread">+ Sub Thread</button>
+          <textarea placeholder="Summary for Thread A"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower-cards">
+      <div class="card">
+        <h3>Structure Your Pointers</h3>
+        <p>Description: Write a 400-500 word article from your thread.</p>
+        <form>
+          <input type="text" placeholder="Title">
+          <textarea placeholder="Content"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>4SA Method</h3>
+        <p>Description: To explore more read more</p>
+        <details>
+          <summary>Introduction</summary>
+          <p>The 4SA Method, How to bring an idea into process?</p>
+        </details>
+        <details>
+          <summary>Thread A</summary>
+          <p>How are you going to develop your strategy? Which method are you going to use to develop a strategy? What if the project is lengthy?</p>
+        </details>
+      </div>
+    </div>
+    <div class="floating-menu">
+      <button class="menu-button">?</button>
+      <button class="menu-button">&#128101;</button>
+      <button class="menu-button">&#128197;</button>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sidebar = document.getElementById("sidebar");
+      const toggleButton = document.getElementById("toggleSidebar");
+      const closeButton = document.getElementById("closeSidebar");
+
+      // Open the sidebar
+      toggleButton.addEventListener("click", () => {
+        sidebar.classList.add("open");
+      });
+
+      // Close the sidebar
+      closeButton.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+      });
+
+      const addThreadButton = document.querySelector(".add-thread");
+      const threadContainer = document.querySelector(".thread");
+
+      // Add a new thread dynamically
+      addThreadButton.addEventListener("click", () => {
+        const newThread = document.createElement("input");
+        newThread.type = "text";
+        newThread.placeholder = "New Sub Thread";
+        threadContainer.insertBefore(newThread, addThreadButton);
+      });
+    });
+  </script>
+</body>
+</html>

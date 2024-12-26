@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding for spacing */
+    background-color: #ffffff; /* Optional: Background for header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Header shadow */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the logo */
+    justify-content: flex-start; /* Align logo to the left */
+}
+
+.logo {
+    height: 50px; 
+    margin-right: 20px;
+    margin-left: 40px; 
+}
+
+.intro {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    margin-top: 0;
+}
+
+.submit-task {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-task:hover {
+    background-color: #3a3ed6;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px; /* Add margin here */
+}
+
+/* Flexbox for upper and lower card sections */
+.upper-cards,
+.lower-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Makes the cards fit side by side */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.thread input,
+.thread textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.add-thread {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.add-thread:hover {
+    background-color: #3a3ed6;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: #3a3ed6;
+}
+
+details {
+    margin-top: 10px;
+}
+
+/* Floating menu styles */
+.floating-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.menu-button {
+    width: 50px;
+    height: 50px;
+    background-color: #4a4eff; /* Button color */
+    color: white; /* Icon color */
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 24px; /* Icon size */
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background-color: #3a3ed6;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.top-right-menu {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #4a4eff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-icon:hover {
+    background-color: #3a3ed6;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: left 0.3s ease-in-out; /* Smooth slide effect */
+    z-index: 1000;
+}
+
+/* Sidebar open state */
+.sidebar.open {
+    left: 0; /* Slide into view */
+}
+
+/* Sidebar header */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Close button */
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Arrow button to toggle the sidebar */
+.toggle-arrow {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    background: #4a4eff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.toggle-arrow:hover {
+    background: #3a3ed6;
+}

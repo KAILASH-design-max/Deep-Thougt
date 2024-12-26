@@ -1,0 +1,21 @@
+{
+    "tasks": [
+      {
+        "taskID": "task1",
+        "taskName": "Complete Research",
+        "assets": [
+          {
+            "assetID": "asset1",
+            "assetName": "Research Paper",
+            "description": "A detailed paper on the research topic."
+          },
+          {
+            "assetID": "asset2",
+            "assetName": "Data Collection",
+            "description": "Collect data for the research project."
+          }
+        ]
+      }
+    ]
+  }
+  
